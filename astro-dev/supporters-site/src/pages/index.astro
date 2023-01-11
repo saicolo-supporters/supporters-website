@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="SAICOLO Supporters Site">
+	<main>
+		<h1><span class="text-gradient">SAICOLO Supporters Site</span></h1>
+		<p class="instructions">
+			日本女子フットサルリーグ所属クラブ『さいたまSAICOLO』のサポーターサイトです。</br>
+			※ 仮運用中。2023-24シーズンから本格運用の予定です。
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://note.com/saicolosupporter/n/n68e630dbc3a9"
+				title="Match Information"
+				body="直近の試合情報"
+			/>
+
+			<Card
+				href="https://note.com/saicolosupporter/n/nf678f116b7bf"
+				title="In/Out"
+				body="退団・新加入情報"
+			/>
+			<Card
+				href="https://w-fleague.jp/"
+				title="WOMEN'S F.LEAGUE Official"
+				body="日本女子フットサルリーグ公式サイト"
+			/>
+			<Card
+				href="https://www.saicolo.com/"
+				title="SAICOLO Official"
+				body="さいたまSAICOLO公式サイト"
+			/>
+			<Card
+				href="https://saicolo-supporters.mystrikingly.com/"
+				title="Old Site"
+				body="旧サイト(2022-23シーズンまでのサイト)へのリンク"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
